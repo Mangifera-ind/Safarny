@@ -1,0 +1,62 @@
+:root {
+    --primaryColor: #fff;
+    --secondaryColor: #151516;
+    --blue: #01959a;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primaryColor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--secondaryColor);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--blue);
+    color: var(--primaryColor);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondaryColor);
+}
+
+#message {
+    text-align: center;
+    color: var(--blue);
+}

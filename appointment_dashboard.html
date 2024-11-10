@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Dashboard</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Dashboard</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+
+        <!-- Form for adding appointment -->
+        <form id="add-appointment-form" action="admin_add_appointment.php" method="POST">
+            <input type="date" name="day" required>
+            <input type="time" name="time" required>
+            <input type="text" name="status" placeholder="Status" required>
+            <input type="text" name="office_id" placeholder="Office ID" required>
+            <button type="submit">Add Appointment</button>
+        </form>
+
+        <!-- Form for updating appointment -->
+        <form id="update-appointment-form" action="admin_update_appointment.php" method="POST">
+            <h2>Update Appointment</h2>
+            <input type="number" name="appointment_id" placeholder="Appointment ID to Update" required>
+            <input type="date" name="new_day" placeholder="New Day">
+            <input type="time" name="new_time" placeholder="New Time">
+            <input type="text" name="new_status" placeholder="New Status">
+            <input type="text" name="new_office_id" placeholder="New Office ID">
+            <button type="submit">Update Appointment</button>
+        </form>
+
+        <!-- Form for deleting appointment -->
+        <form id="delete-appointment-form" action="admin_delete_appointment.php" method="POST">
+            <h2>Delete Appointment</h2>
+            <input type="number" name="appointment_id" placeholder="Appointment ID to Delete" required>
+            <button type="submit">Delete Appointment</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

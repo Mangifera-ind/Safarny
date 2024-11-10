@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Feedback</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Feedback</h1>
+        <h2>Add Feedback</h2>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding feedback -->
+        <form id="add-feedback-form" action="admin_add_feedback.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <textarea name="comment" placeholder="Comment" required></textarea>
+            <input type="date" name="date" required>
+            <button type="submit">Add Feedback</button>
+        </form>
+
+        <!-- Form for updating feedback -->
+        <form id="update-feedback-form" action="admin_update_feedback.php" method="POST">
+            <h2>Update Feedback</h2>
+            <input type="text" name="feedback_id" placeholder="Feedback ID to Update" required>
+            <input type="email" name="new_email" placeholder="New Email">
+            <input type="text" name="new_name" placeholder="New Name">
+            <textarea name="new_comment" placeholder="New Comment"></textarea>
+            <input type="date" name="new_date">
+            <button type="submit">Update Feedback</button>
+        </form>
+
+        <!-- Form for deleting feedback -->
+        <form id="delete-feedback-form" action="admin_delete_feedback.php" method="POST">
+            <h2>Delete Feedback</h2>
+            <input type="text" name="feedback_id" placeholder="Feedback ID to Delete" required>
+            <button type="submit">Delete Feedback</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

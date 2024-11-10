@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/AboutUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="blur">
+        <header>
+            <h1><img src="media/SAFARNY.png" alt="Logo" class="navbar-logo"></h1>
+
+            <ul>
+                <li>
+                    <i class="fa fa-house"></i>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <i class="fa fa-briefcase"></i>
+                    <a href="Service.html">Services</a>
+                </li>
+
+                <li>
+                    <i class="fa fa-circle-info"></i>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-address-book"></i>
+                    <a class="helloBtn">Contact</a>
+                </li>
+            </ul>
+
+            <a href="signin-up.php"><button class="btn01" id="sign">User</button></a>
+                <a href="Admin_form_tryout.html"><button class="btn01" id="sign">Admin</button></a>
+        </header>
+        <section-1 class="home">
+            <video class="video-slide active" src="media/Videos/aboutt.mp4" autoplay muted loop></video>
+            <div class="contento">
+                <h1>About.<br><span>us</span></h1>
+                <p>Welcome to our travel community, where passion for exploration meets unparalleled service. Our mission is to create unforgettable memories by connecting travelers to the world's most captivating destinations. We believe that travel is more than just visiting new places; it's about experiencing the culture, tasting the cuisine, and immersing oneself in the local lifestyle.</p>
+            
+                <p>Our team of seasoned travel experts is dedicated to crafting bespoke travel itineraries tailored to your preferences. Whether you are seeking an adventurous trek through the mountains, a relaxing beach getaway, or a cultural tour through historic cities, we have the expertise to make your journey seamless and extraordinary.</p>
+            </div>
+            <div class="slider-navigation">
+                
+            </div>
+        </section-1>
+        <footer>
+            <div class="f01">
+                <div class="main">
+                    <div class="title">
+                        <h1><img src="media/SAFARNYwi.png" alt="Logo" class="navbar-logo"></h1>
+                        <p>Hustle Free Traveling Excperience.</p>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-behance"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="links">
+                    <section>
+                        <h3>Project</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Vitrine</a>
+                            </li>
+                            <li>
+                                <a href="#">Status</a>
+                            </li>
+                            <li>
+                                <a href="#">License</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Help</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                            <li>
+                                <a href="#">Troubleshooting</a>
+                            </li>
+                           
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Others</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Terms of services</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">License</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="hello" id="hello-form">
+        <span class="close">&times;</span>
+        <h3>Say Hello!</h3>
+        <p>Send us a message!</p>
+        <br>
+        <form action="">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" value="Send" class="bn632-hover bn25">
+        </form>
+    </div>
+    <script src="script/script.js"></script>
+    <script>
+        // JavaScript for slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+</html>

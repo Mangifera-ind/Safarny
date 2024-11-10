@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - User</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - User</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        
+        <!-- Form for adding a user -->
+        <form id="add-user-form" action="admin_add_user.php" method="POST">
+            <input type="text" name="user_address" placeholder="User Address" required>
+            <div>
+                <label>User Gender:</label>
+                <input type="radio" name="user_gender" value="0" required> Male
+                <input type="radio" name="user_gender" value="1" required> Female
+            </div>
+            <input type="text" name="user_phone" placeholder="User Phone" required>
+            <input type="email" name="user_mail" placeholder="User Mail" required>
+            <input type="date" name="user_dob" placeholder="User DOB" required>
+            <input type="text" name="passport" placeholder="Passport" required>
+            <input type="text" name="subscription" placeholder="Subscription" required>
+            <input type="text" name="user_id" placeholder="User ID" required>
+            <button type="submit">Add User</button>
+        </form>
+
+        <!-- Form for updating a user -->
+        <form id="update-user-form" action="admin_update_user.php" method="POST">
+            <h2>Update User</h2>
+            <input type="text" name="user_id" placeholder="User ID to Update" required>
+            <input type="text" name="new_user_address" placeholder="New User Address">
+            <div>
+                <label>User Gender:</label>
+                <input type="radio" name="new_user_gender" value="0"> Male
+                <input type="radio" name="new_user_gender" value="1"> Female
+            </div>
+            <input type="text" name="new_user_phone" placeholder="New User Phone">
+            <input type="email" name="new_user_mail" placeholder="New User Mail">
+            <input type="date" name="new_user_dob" placeholder="New User DOB">
+            <input type="text" name="new_passport" placeholder="New Passport">
+            <input type="text" name="new_subscription" placeholder="New Subscription">
+            <button type="submit">Update User</button>
+        </form>
+
+        <!-- Form for deleting a user -->
+        <form id="delete-user-form" action="admin_delete_user.php" method="POST">
+            <h2>Delete User</h2>
+            <input type="text" name="user_id" placeholder="User ID to Delete" required>
+            <button type="submit">Delete User</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

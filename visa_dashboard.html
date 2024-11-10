@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Visa</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Visa</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding a visa -->
+        <form id="add-visa-form" action="admin_add_visa.php" method="POST">
+            <input type="text" name="issuing_country" placeholder="Issuing Country" required>
+            <input type="number" step="0.01" name="visa_fee" placeholder="Visa Fee" required>
+            <input type="date" name="expiration_date" placeholder="Expiration Date" required>
+            <input type="text" name="country_id" placeholder="Country ID" required>
+            <input type="text" name="visa_id" placeholder="Visa ID" required>
+            <button type="submit">Add Visa</button>
+        </form>
+
+        <!-- Form for updating a visa -->
+        <form id="update-visa-form" action="admin_update_visa.php" method="POST">
+            <h2>Update Visa</h2>
+            <input type="text" name="visa_id" placeholder="Visa ID to Update" required>
+            <input type="text" name="new_issuing_country" placeholder="New Issuing Country">
+            <input type="number" step="0.01" name="new_visa_fee" placeholder="New Visa Fee">
+            <input type="date" name="new_expiration_date" placeholder="New Expiration Date">
+            <input type="text" name="new_country_id" placeholder="New Country ID">
+            <button type="submit">Update Visa</button>
+        </form>
+
+        <!-- Form for deleting a visa -->
+        <form id="delete-visa-form" action="admin_delete_visa.php" method="POST">
+            <h2>Delete Visa</h2>
+            <input type="text" name="visa_id" placeholder="Visa ID to Delete" required>
+            <button type="submit">Delete Visa</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

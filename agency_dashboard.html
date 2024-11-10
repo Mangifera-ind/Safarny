@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Dashboard</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agency Dashboard</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding ag -->
+        <form id="add-agency-form" action="admin_add_agency.php" method="POST">
+            <input type="text" name="agency_name" placeholder="Agency Name" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="referal_links" placeholder="Referral Links" required>
+            <textarea name="agency_description" placeholder="Agency Description" required></textarea>
+            <textarea name="feedback" placeholder="Feedback" required></textarea>
+            <button type="submit">Add Agency</button>
+        </form>
+
+        <!--Form for updating ag -->
+        <form id="update-agency-form" action="admin_update_agency.php" method="POST">
+            <h2>Update Agency</h2>
+            <input type="text" name="agency_id" placeholder="Agency ID to Update" required>
+            <input type="text" name="new_agency_name" placeholder="New Agency Name">
+            <input type="text" name="new_address" placeholder="New Address">
+            <input type="text" name="new_phone_number" placeholder="New Phone Number">
+            <input type="email" name="new_email" placeholder="New Email">
+            <input type="text" name="new_referral_links" placeholder="New Referral Links">
+            <textarea name="new_agency_description" placeholder="New Agency Description"></textarea>
+            <textarea name="new_feedback" placeholder="New Feedback"></textarea>
+            <button type="submit">Update Agency</button>
+        </form>
+
+        <!-- Form for deleting ag -->
+        <form id="delete-agency-form" action="admin_delete_agency.php" method="POST">
+            <h2>Delete Agency</h2>
+            <input type="text" name="agency_id" placeholder="Agency ID to Delete" required>
+            <button type="submit">Delete Agency</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

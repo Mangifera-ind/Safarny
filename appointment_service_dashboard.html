@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment service Dashboard</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment service Dashboard</h1>
+        <h2>Add Appointment Service</h2>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding appointment service -->
+        <form id="add-appointment-service-form" action="admin_add_appointment_service.php" method="POST">
+            <input type="text" name="service_fee" placeholder="Service Fee" required>
+            <input type="text" name="cancellation_policy" placeholder="Cancellation Policy" required>
+            <input type="number" name="appointment_id" placeholder="Appointment ID" required>
+            <button type="submit">Add Appointment Service</button>
+        </form>
+
+        <!-- Form for updating appointment service -->
+        <form id="update-appointment-service-form" action="admin_update_appointment_service.php" method="POST">
+            <h2>Update Appointment Service</h2>
+            <input type="number" name="appointmentservice_id" placeholder="Appointment Service ID to Update" required>
+            <input type="number" name="new_service_fee" placeholder="New Service Fee">
+            <input type="text" name="new_cancellation_policy" placeholder="New Cancellation Policy">
+            <input type="number" name="new_appointment_id" placeholder="New Appointment ID">
+            <button type="submit">Update Appointment Service</button>
+        </form>
+
+        <!-- Form for deleting appointment service -->
+        <form id="delete-appointment-service-form" action="admin_delete_appointment_service.php" method="POST">
+            <h2>Delete Appointment Service</h2>
+            <input type="number" name="appointmentservice_id" placeholder="Appointment Service ID to Delete" required>
+            <button type="submit">Delete Appointment Service</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

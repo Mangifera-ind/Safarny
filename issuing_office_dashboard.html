@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Issuing Office</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Issuing Office</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding an issuing office -->
+        <form id="add-issuing-office-form" action="admin_add_issuing_office.php" method="POST">
+            <input type="text" name="office_name" placeholder="Office Name" required>
+            <input type="text" name="office_location" placeholder="Office Location" required>
+            <input type="time" name="opening_time" placeholder="Opening Time" required>
+            <input type="time" name="closing_time" placeholder="Closing Time" required>
+            <input type="text" name="country_id" placeholder="country_id" required>
+            <button type="submit">Add Issuing Office</button>
+        </form>
+
+        <!-- Form for updating an issuing office -->
+        <form id="update-issuing-office-form" action="admin_update_issuing_office.php" method="POST">
+            <h2>Update Issuing Office</h2>
+            <input type="text" name="office_id" placeholder="Office ID to Update" required>
+            <input type="text" name="new_office_name" placeholder="New Office Name">
+            <input type="text" name="new_office_location" placeholder="New Office Location">
+            <input type="time" name="new_opening_time" placeholder="New Opening Time">
+            <input type="time" name="new_closing_time" placeholder="New Closing Time">
+            <input type="text" name="new_country_id" placeholder="New Country ID">
+            <button type="submit">Update Issuing Office</button>
+        </form>
+
+        <!-- Form for deleting an issuing office -->
+        <form id="delete-issuing-office-form" action="admin_delete_issuing_office.php" method="POST">
+            <h2>Delete Issuing Office</h2>
+            <input type="text" name="office_id" placeholder="Office ID to Delete" required>
+            <button type="submit">Delete Issuing Office</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

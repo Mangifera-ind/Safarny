@@ -1,0 +1,101 @@
+section-1 {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #01959a;
+}
+
+
+
+.home .contento {
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 50px; /* Add this line to move content to the left */
+    text-align: left; /* Add this line to align text to the left */
+}
+
+.home .contento h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .contento h1 span {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.home .contento p {
+    margin-bottom: 65px;
+}
+
+.home .contento a {
+    background: #fff;
+    padding: 15px 35px;
+    color: #01959a;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home video {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Start hidden */
+    transition: 1s ease-in-out; /* Smooth transition */
+}
+
+.video-slide.active {
+    opacity: 1; /* Show active slide */
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+}
+
+.slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgb(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+	margin-right: 410px;
+}
+
+.slider-navigation .nav-btn.active {
+    background: #01959a;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}

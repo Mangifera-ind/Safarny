@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Visa Types</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Visa Types</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding a visa type -->
+        <form id="add-visatype-form" action="admin_add_visatype.php" method="POST">
+            <input type="text" name="visatype_id" placeholder="Visa Type ID" required>
+            <input type="text" name="visatype_name" placeholder="Visa Type Name" required>
+            <button type="submit">Add Visa Type</button>
+        </form>
+
+        <!-- Form for updating a visa type -->
+        <form id="update-visatype-form" action="admin_update_visatype.php" method="POST">
+            <h2>Update Visa Type</h2>
+            <input type="text" name="visatype_id" placeholder="Visa Type ID to Update" required>
+            <input type="text" name="new_visatype_name" placeholder="New Visa Type Name">
+            <button type="submit">Update Visa Type</button>
+        </form>
+
+        <!-- Form for deleting a visa type -->
+        <form id="delete-visatype-form" action="admin_delete_visatype.php" method="POST">
+            <h2>Delete Visa Type</h2>
+            <input type="text" name="visatype_id" placeholder="Visa Type ID to Delete" required>
+            <button type="submit">Delete Visa Type</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

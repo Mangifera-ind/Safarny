@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Dashboard</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Accounts</h1>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding account -->
+        <form id="add-account-form" action="admin_add_account.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="user_id" placeholder="User ID" required>
+            <button type="submit">Add Account</button>
+        </form>
+
+        <!-- Form for updating account -->
+        <form id="update-account-form" action="admin_update_account.php" method="POST">
+            <h2>Update Account</h2>
+            <input type="text" name="account_id" placeholder="Account ID to Update" required>
+            <input type="text" name="new_username" placeholder="New Username">
+            <input type="password" name="new_password" placeholder="New Password">
+            <input type="text" name="new_user_id" placeholder="New User ID">
+            <button type="submit">Update Account</button>
+        </form>
+
+        <!-- Form for deleting account -->
+        <form id="delete-account-form" action="admin_delete_account.php" method="POST">
+            <h2>Delete Account</h2>
+            <input type="text" name="account_id" placeholder="Account ID to Delete" required>
+            <button type="submit">Delete Account</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

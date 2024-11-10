@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Country</title>
+    <link rel="stylesheet" href="agency_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Country</h1>
+        <h2>Add Country</h2>
+        <button onclick="location.href='admin_main_dashboard.html'" class="back-button">Back to Main Dashboard</button>
+        <!-- Form for adding country -->
+        <form id="add-country-form" action="admin_add_country.php" method="POST">
+            <input type="text" name="country_name" placeholder="Country Name" required>
+            <input type="text" name="region" placeholder="Region" required>
+            <input type="text" name="language" placeholder="Language" required>
+            <input type="text" name="currency" placeholder="Currency" required>
+            <button type="submit">Add Country</button>
+        </form>
+
+        <!-- Form for updating country -->
+        <form id="update-country-form" action="admin_update_country.php" method="POST">
+            <h2>Update Country</h2>
+            <input type="text" name="country_id" placeholder="Country ID to Update" required>
+            <input type="text" name="new_country_name" placeholder="New Country Name">
+            <input type="text" name="new_region" placeholder="New Region">
+            <input type="text" name="new_language" placeholder="New Language">
+            <input type="text" name="new_currency" placeholder="New Currency">
+            <button type="submit">Update Country</button>
+        </form>
+
+        <!-- Form for deleting country -->
+        <form id="delete-country-form" action="admin_delete_country.php" method="POST">
+            <h2>Delete Country</h2>
+            <input type="text" name="country_id" placeholder="Country ID to Delete" required>
+            <button type="submit">Delete Country</button>
+        </form>
+    </div>
+    <script src="admin_dashboard_formhandling.js"></script>
+</body>
+</html>

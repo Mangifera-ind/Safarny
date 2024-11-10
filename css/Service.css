@@ -1,0 +1,46 @@
+.card {
+  width: 1000px;
+  height: 360px;
+  border-radius: 20px;
+  background: #212121;
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  margin-left: 230px;
+  align-items: center;
+}
+
+.card .card-link, .card p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all .5s;
+  background: #212121;
+  border: 1px solid #01959a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove text underline from links */
+  color: inherit; /* Inherit text color from parent */
+}
+
+.card .card-link:hover, .card p:hover {
+  flex: 4;
+}
+
+.card .card-link span, .card p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #01959a;
+  letter-spacing: .1em;
+}
+
+.card .card-link:hover span, .card p:hover span {
+  transform: rotate(0);
+}
